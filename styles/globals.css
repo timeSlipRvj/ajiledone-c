@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--color-primary: 69 83 124;
+}
+
+body {
+	font-family: Montserrat, sans-serif;
+}
+
+.active-nav-link {
+	position: relative;
+}
+
+.active-nav-link::before {
+	content: '';
+
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%) perspective(10px) rotateX(15deg);
+	width: 50%;
+	height: 0.4rem;
+
+	background-color: rgb(var(--color-primary));
+	border-radius: 5px;
+}
+
+.marker-➤::marker {
+	content: '➤';
+}
+
+.footer-section-headers {
+	text-transform: uppercase;
+	@apply font-light mb-5;
+}
+
+.careers-team-box::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 1.5rem;
+
+	@apply w-14;
+	@apply h-7;
+}
